@@ -1,7 +1,7 @@
 # Bootstrap Social Buttons
 Common social media buttons for Bootstrap 4
 
-![Buttons](./img/buttons_8.5.16.png "Available Buttons")
+![Buttons](./Social Buttons.png "Available Buttons")
 
 ## Implementation
 
