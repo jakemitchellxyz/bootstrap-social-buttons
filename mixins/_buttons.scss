@@ -1,31 +1,38 @@
-// left and right button icons (hex, string[left or right], string[left or right], boolean)
-@mixin button-icon($color, $inside, $outside, $outline) {
-  &.btn-icon-#{$outside} {
-    padding-#{$outside}: ($btn-padding-x / 2);
-    &.btn-sm {
-      padding-#{$outside}: ($btn-padding-x / 4); }
-    &.btn-lg {
-      padding-#{$outside}: $btn-padding-x; }
-    
-    i, span {
-      min-width: (($btn-padding-x / 2) + ($btn-padding-x / 4) + 1);
-      padding-#{$inside}: ($btn-padding-x / 4);
-      margin-#{$inside}: ($btn-padding-x / 4);
+// left and right button icons (hex, boolean)
+@mixin button-icon($color, $outline) {
+  $sides: (
+    left: 'right',
+    right: 'left'
+  );
+  
+  @each $side, $opposite-side in $sides {
+    &.btn-icon-#{$side} {
+      padding-#{$side}: ($btn-padding-x / 2);
+      &.btn-sm {
+        padding-#{$side}: ($btn-padding-x / 4); }
+      &.btn-lg {
+        padding-#{$side}: $btn-padding-x; }
+      
+      i, span {
+        min-width: (($btn-padding-x / 2) + ($btn-padding-x / 4) + 1);
+        padding-#{$opposite-side}: ($btn-padding-x / 4);
+        margin-#{$opposite-side}: ($btn-padding-x / 4);
+        
+        @if($outline) {
+          color: $color;
+          border-#{$opposite-side}: 1px solid $color;
+        }
+        @else {
+          border-#{$opposite-side}: 1px solid lighten($color, 30%);
+        }
+      }
       
       @if($outline) {
-        color: $color;
-        border-#{$inside}: 1px solid $color;
-      }
-      @else {
-        border-#{$inside}: 1px solid lighten($color, 30%);
-      }
-    }
-    
-    @if($outline) {
-      &:hover {
-        i, span {
-          color: #fff;
-          border-#{$inside}-color: lighten($color, 30%);
+        &:hover {
+          i, span {
+            color: #fff;
+            border-#{$opposite-side}-color: lighten($color, 30%);
+          }
         }
       }
     }
