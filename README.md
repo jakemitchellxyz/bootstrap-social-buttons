@@ -46,7 +46,7 @@ icons on the right:
 ![Icon on right](./img/icon_right.png "Icon on the right")
 
 ``` html
-<button class="btn btn-social-tumblr btn-icon-right"><i class="fa fa-tumblr"></i> Tumblr</button>
-<button class="btn btn-outline-social-twitter btn-icon-right"><i class="fa fa-twitter"></i> Twitter</button>
+<button class="btn btn-social-tumblr btn-icon-right">Tumblr <i class="fa fa-tumblr"></i></button>
+<button class="btn btn-outline-social-twitter btn-icon-right">Twitter <i class="fa fa-twitter"></i></button>
 ```
 
