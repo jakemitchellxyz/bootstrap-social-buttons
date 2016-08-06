@@ -16,81 +16,12 @@ $social-colors: (
 @each $media, $color in $social-colors {
   .btn-social-#{$media} {
     @include button-variant(#fff, $color, $color);
-    &.btn-icon-left {
-      padding-left: ($btn-padding-x / 2);
-      &.btn-sm {
-        padding-left: 0; }
-      &.btn-lg {
-        padding-left: $btn-padding-x; }
-      
-      i, span {
-        min-width: (($btn-padding-x / 2) + ($btn-padding-x / 4) + 1);
-        padding-right: ($btn-padding-x / 4);
-        border-right: 1px solid lighten($color, 30%);
-        margin-right: ($btn-padding-x / 4);
-      }
-    }
-    
-    &.btn-icon-right {
-      padding-right: ($btn-padding-x / 2);
-      &.btn-sm {
-        padding-right: ($btn-padding-x / 4); }
-      &.btn-lg {
-        padding-right: $btn-padding-x; }
-      
-      i, span {
-        min-width: (($btn-padding-x / 2) + ($btn-padding-x / 4) + 1);
-        padding-left: ($btn-padding-x / 4);
-        border-left: 1px solid lighten($color, 30%);
-        margin-left: ($btn-padding-x / 4);
-      }
-    }
+    @include button-icon($color, 'left', 'right', false);
+    @include button-icon($color, 'right', 'left', false);
   }
   .btn-outline-social-#{$media} {
     @include button-outline-variant($color);
-    &.btn-icon-left {
-      padding-left: ($btn-padding-x / 2);
-      &.btn-sm {
-        padding-left: ($btn-padding-x / 4); }
-      &.btn-lg {
-        padding-left: $btn-padding-x; }
-      
-      i, span {
-        color: $color;
-        min-width: (($btn-padding-x / 2) + ($btn-padding-x / 4) + 1);
-        padding-right: ($btn-padding-x / 4);
-        border-right: 1px solid $color;
-        margin-right: ($btn-padding-x / 4);
-      }
-      
-      &:hover {
-        i, span {
-          color: #fff;
-          border-right-color: lighten($color, 30%);
-        }
-      }
-    }
-    &.btn-icon-right {
-      padding-right: ($btn-padding-x / 2);
-      &.btn-sm {
-        padding-right: 0; }
-      &.btn-lg {
-        padding-right: $btn-padding-x; }
-      
-      i, span {
-        color: $color;
-        min-width: (($btn-padding-x / 2) + ($btn-padding-x / 4) + 1);
-        padding-left: ($btn-padding-x / 4);
-        border-left: 1px solid $color;
-        margin-left: ($btn-padding-x / 4);
-      }
-      
-      &:hover {
-        i, span {
-          color: #fff;
-          border-left-color: lighten($color, 30%);
-        }
-      }
-    }
+    @include button-icon($color, 'left', 'right', true);
+    @include button-icon($color, 'right', 'left', true);
   }
 }

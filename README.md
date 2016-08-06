@@ -13,6 +13,8 @@ Then, modify the file `bootstrap.scss` to import the social buttons on the line 
 @import 'social-buttons';
 ```
 
+Finally, add the contents of `mixins/_buttons.scss` to the end of the corresponding Bootstrap mixin file.
+
 Then use the compiler of your choice to recompile the Bootstrap Scss down to CSS and you're good to go!
 
 ## Usage

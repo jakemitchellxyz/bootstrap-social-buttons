@@ -1,0 +1,33 @@
+// left and right button icons (hex, string[left or right], string[left or right], boolean)
+@mixin button-icon($color, $inside, $outside, $outline) {
+  &.btn-icon-#{$outside} {
+    padding-#{$outside}: ($btn-padding-x / 2);
+    &.btn-sm {
+      padding-#{$outside}: ($btn-padding-x / 4); }
+    &.btn-lg {
+      padding-#{$outside}: $btn-padding-x; }
+    
+    i, span {
+      min-width: (($btn-padding-x / 2) + ($btn-padding-x / 4) + 1);
+      padding-#{$inside}: ($btn-padding-x / 4);
+      margin-#{$inside}: ($btn-padding-x / 4);
+      
+      @if($outline) {
+        color: $color;
+        border-#{$inside}: 1px solid $color;
+      }
+      @else {
+        border-#{$inside}: 1px solid lighten($color, 30%);
+      }
+    }
+    
+    @if($outline) {
+      &:hover {
+        i, span {
+          color: #fff;
+          border-#{$inside}-color: lighten($color, 30%);
+        }
+      }
+    }
+  }
+}
