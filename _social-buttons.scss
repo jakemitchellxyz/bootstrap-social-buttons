@@ -18,6 +18,10 @@ $social-colors: (
     @include button-variant(#fff, $color, $color);
     &.btn-icon-left {
       padding-left: ($btn-padding-x / 2);
+      &.btn-sm {
+        padding-left: 0; }
+      &.btn-lg {
+        padding-left: $btn-padding-x; }
       
       i, span {
         min-width: (($btn-padding-x / 2) + ($btn-padding-x / 4) + 1);
@@ -26,8 +30,13 @@ $social-colors: (
         margin-right: ($btn-padding-x / 4);
       }
     }
+    
     &.btn-icon-right {
       padding-right: ($btn-padding-x / 2);
+      &.btn-sm {
+        padding-right: ($btn-padding-x / 4); }
+      &.btn-lg {
+        padding-right: $btn-padding-x; }
       
       i, span {
         min-width: (($btn-padding-x / 2) + ($btn-padding-x / 4) + 1);
@@ -41,6 +50,10 @@ $social-colors: (
     @include button-outline-variant($color);
     &.btn-icon-left {
       padding-left: ($btn-padding-x / 2);
+      &.btn-sm {
+        padding-left: ($btn-padding-x / 4); }
+      &.btn-lg {
+        padding-left: $btn-padding-x; }
       
       i, span {
         color: $color;
@@ -59,6 +72,10 @@ $social-colors: (
     }
     &.btn-icon-right {
       padding-right: ($btn-padding-x / 2);
+      &.btn-sm {
+        padding-right: 0; }
+      &.btn-lg {
+        padding-right: $btn-padding-x; }
       
       i, span {
         color: $color;
