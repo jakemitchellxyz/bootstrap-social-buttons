@@ -1,7 +1,7 @@
 # Bootstrap Social Buttons
 Common social media buttons for Bootstrap 4
 
-![Buttons](./Social Buttons.png "Available Buttons")
+![Buttons](./img/all_buttons.png "Available Buttons")
 
 ## Implementation
 
@@ -19,12 +19,34 @@ Then use the compiler of your choice to recompile the Bootstrap Scss down to CSS
 
 to get normal buttons:
 ``` html
-<button type="button" class="btn btn-social-facebook">Facebook</button>
-<button type="button" class="btn btn-social-twitter">Twitter</button>
+<button class="btn btn-social-facebook">Facebook</button>
+<button class="btn btn-social-twitter">Twitter</button>
 ```
 
 to get outlined buttons:
 ``` html
-<button type="button" class="btn btn-outline-social-instagram">Instagram</button>
-<button type="button" class="btn btn-outline-social-googleplus">Google</button>
+<button class="btn btn-outline-social-instagram">Instagram</button>
+<button class="btn btn-outline-social-google-plus">Google Plus</button>
 ```
+
+## Icons
+
+icons on the left:
+
+![Icon on left](./img/icon_left.png "Icon on the left")
+
+``` html
+<button class="btn btn-social-facebook btn-icon-left"><i class="fa fa-facebook"></i> Facebook</button>
+<button class="btn btn-outline-social-flickr btn-icon-left"><i class="fa fa-flickr"></i> Flickr</button>
+```
+
+
+icons on the right:
+
+![Icon on right](./img/icon_right.png "Icon on the right")
+
+``` html
+<button class="btn btn-social-tumblr btn-icon-right"><i class="fa fa-tumblr"></i> Tumblr</button>
+<button class="btn btn-outline-social-twitter btn-icon-right"><i class="fa fa-twitter"></i> Twitter</button>
+```
+
