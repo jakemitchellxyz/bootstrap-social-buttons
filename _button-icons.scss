@@ -3,6 +3,9 @@
     padding-#{$side}: $btn-padding-x-sm;
     
     i, span {
+      position: relative;
+      top: 2px; // vertical fix the float creates
+      float: #{$side} !important;
       min-width: ($btn-padding-x * 1.5);
       padding-#{$opposite-side}: $btn-padding-x-sm;
       margin-#{$opposite-side}: $btn-padding-x;
