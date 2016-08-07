@@ -16,10 +16,8 @@ $social-colors: (
 @each $media, $color in $social-colors {
   .btn-social-#{$media} {
     @include button-variant(#fff, $color, $color);
-    @include button-icon($color, false);
   }
   .btn-outline-social-#{$media} {
     @include button-outline-variant($color);
-    @include button-icon($color, true);
   }
 }

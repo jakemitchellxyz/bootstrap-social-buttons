@@ -1,0 +1,29 @@
+.btn-icon-left {
+  padding-left: $btn-padding-x-sm;
+  &.btn-sm {
+    padding-left: ($btn-padding-x-sm / 2); }
+  &.btn-lg {
+    padding-left: $btn-padding-x; }
+  
+  i, span {
+    min-width: ($btn-padding-x * 1.5);
+    padding-right: ($btn-padding-x-sm / 2);
+    margin-right: $btn-padding-x-sm;
+    border-right: 1px solid $link-color;
+  }
+}
+
+.btn-icon-right {
+  padding-right: $btn-padding-x-sm;
+  &.btn-sm {
+    padding-right: ($btn-padding-x-sm / 2); }
+  &.btn-lg {
+    padding-right: $btn-padding-x; }
+  
+  i, span {
+    min-width: ($btn-padding-x * 1.5);
+    padding-left: ($btn-padding-x-sm / 2);
+    margin-left: $btn-padding-x-sm;
+    border-left: 1px solid $link-color;
+  }
+}

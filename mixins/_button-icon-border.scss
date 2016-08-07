@@ -1,0 +1,18 @@
+@mixin button-icon-border($color, $outline) {
+  &.btn-icon-left, 
+  &.btn-icon-right {
+    i, span {
+      border-color: lighten($color, 30%); }
+    
+    @if($outline) {
+      i, span {
+        border-color: $color; }
+      &:hover {
+        i, span {
+          color: #fff;
+          border-color: lighten($color, 30%);
+        }
+      }
+    }
+  }
+}
