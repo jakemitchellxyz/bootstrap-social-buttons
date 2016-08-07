@@ -1,6 +1,6 @@
-@mixin button-icon-border($color, $outline) {
-  &.btn-icon-left, 
-  &.btn-icon-right {
+@mixin icon-border($color, $outline) {
+  &.icon-left, 
+  &.icon-right {
     i, span {
       border-color: lighten($color, 30%); }
     

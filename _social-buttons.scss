@@ -14,10 +14,10 @@ $social-colors: (
 ) !default;
 
 @each $media, $color in $social-colors {
-  .btn-social-#{$media} {
+  .btn-#{$media} {
     @include button-variant(#fff, $color, $color);
   }
-  .btn-outline-social-#{$media} {
+  .btn-outline-#{$media} {
     @include button-outline-variant($color);
   }
 }

@@ -16,16 +16,22 @@ Then, modify the file `bootstrap.scss` to import the social buttons and button i
 @import 'social-buttons';
 ```
 
-Then, add the file `mixins/_button-icon-border.scss` to the Bootstrap folder `mixins` in the `scss` folder you added the other files to.
+Then, add the file `mixins/_icon-border.scss` to the Bootstrap folder `mixins` in the `scss` folder you added the other files to.
+
+Then we need to register that file in the Bootstrap mixins file. Modify the file `_mixins.scss` in the Boostrap `scss` folder to add the following line:
+``` sass
+@import "mixins/icon-border";
+```
+
 
 Finally, modify the Boostrap file `mixins/_buttons.scss` to add the following line at the very end of the mixin function titled "button-variant":
 ``` sass
-@include button-icon-border($background, false);
+@include icon-border($background, false);
 ```
 
 in the same file, add the following line to the end of the mixin function titled "button-outline-variant":
 ``` sass
-@include button-icon-border($color, true);
+@include icon-border($color, true);
 ```
 
 Then use the compiler of your choice to recompile the Bootstrap Scss down to CSS and you're good to go!
@@ -34,14 +40,14 @@ Then use the compiler of your choice to recompile the Bootstrap Scss down to CSS
 
 to get normal buttons:
 ``` html
-<button class="btn btn-social-facebook">Facebook</button>
-<button class="btn btn-social-twitter">Twitter</button>
+<button class="btn btn-facebook">Facebook</button>
+<button class="btn btn-twitter">Twitter</button>
 ```
 
 to get outlined buttons:
 ``` html
-<button class="btn btn-outline-social-instagram">Instagram</button>
-<button class="btn btn-outline-social-google-plus">Google Plus</button>
+<button class="btn btn-outline-instagram">Instagram</button>
+<button class="btn btn-outline-google-plus">Google Plus</button>
 ```
 
 ## Icons
@@ -51,8 +57,8 @@ icons on the left:
 ![Icon on left](./img/icon_left.png "Icon on the left")
 
 ``` html
-<button class="btn btn-social-facebook btn-icon-left"><i class="fa fa-facebook"></i> Facebook</button>
-<button class="btn btn-outline-social-flickr btn-icon-left"><i class="fa fa-flickr"></i> Flickr</button>
+<button class="btn btn-facebook icon-left"><i class="fa fa-facebook"></i> Facebook</button>
+<button class="btn btn-outline-flickr icon-left"><i class="fa fa-flickr"></i> Flickr</button>
 ```
 
 
@@ -61,9 +67,9 @@ icons on the right:
 ![Icon on right](./img/icon_right.png "Icon on the right")
 
 ``` html
-<button class="btn btn-social-tumblr btn-icon-right">Tumblr <i class="fa fa-tumblr"></i></button>
-<button class="btn btn-outline-social-twitter btn-icon-right">Twitter <i class="fa fa-twitter"></i></button>
+<button class="btn btn-tumblr icon-right">Tumblr <i class="fa fa-tumblr"></i></button>
+<button class="btn btn-outline-twitter icon-right">Twitter <i class="fa fa-twitter"></i></button>
 ```
 
-**Note**: icons can be used on any Bootstrap 4 buttons via the class `btn-icon-left` or `btn-icon-right`. Icons are not restricted to just the social buttons.
+**Note**: icons can be used on any Bootstrap 4 buttons via the class `icon-left` or `icon-right`. Icons are not restricted to just the social buttons.
 
